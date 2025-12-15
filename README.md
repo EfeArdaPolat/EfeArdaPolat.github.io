@@ -1,1 +1,1 @@
-proje.github.io
+EfeArdaPolat.github.io
