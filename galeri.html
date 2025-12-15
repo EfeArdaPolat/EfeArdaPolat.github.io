@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Galeri: Sanat Eserleri Kategorileri</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Config -->
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#36e27b",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#112117",
+                        "surface-dark": "#1c2e24", // Slightly lighter for cards
+                        "secondary-text": "#9eb7a8",
+                    },
+                    fontFamily: {
+                        "display": ["Spline Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem", 
+                        "lg": "2rem", 
+                        "xl": "3rem", 
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-900 dark:text-white antialiased transition-colors duration-300">
+<!-- Navbar -->
+<nav class="sticky top-0 z-50 w-full border-b border-[#29382f] bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-[1280px] mx-auto px-4 md:px-8">
+<div class="flex items-center justify-between h-20">
+<!-- Logo -->
+<div class="flex items-center gap-2">
+<div class="text-primary">
+<span class="material-symbols-outlined !text-[32px]">palette</span>
+</div>
+<h1 class="text-xl font-bold tracking-tight text-white">Galeri</h1>
+</div>
+<!-- Desktop Menu -->
+<div class="hidden md:flex items-center gap-8">
+<a class="text-white hover:text-primary text-sm font-medium transition-colors" href="#">Ana Sayfa</a>
+<a class="text-primary text-sm font-medium transition-colors" href="#">Koleksiyonlar</a>
+<a class="text-white hover:text-primary text-sm font-medium transition-colors" href="#">Sanatçılar</a>
+<a class="text-white hover:text-primary text-sm font-medium transition-colors" href="#">Hakkımızda</a>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-4">
+<div class="hidden sm:flex items-center bg-surface-dark rounded-full px-4 py-2 border border-[#29382f] focus-within:border-primary/50 transition-colors w-64">
+<span class="material-symbols-outlined text-secondary-text text-xl">search</span>
+<input class="bg-transparent border-none text-white placeholder-secondary-text text-sm w-full focus:ring-0" placeholder="Eser veya sanatçı ara..." type="text"/>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-background-dark font-bold text-sm px-6 py-2.5 rounded-full transition-colors">
+                        Giriş Yap
+                    </button>
+</div>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="relative flex flex-col min-h-screen">
+<!-- Hero / Page Heading -->
+<div class="w-full max-w-[1280px] mx-auto px-4 md:px-8 py-12 md:py-16">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="max-w-2xl">
+<h2 class="text-4xl md:text-5xl font-black tracking-tight mb-4 text-white">
+                        Sanat <span class="text-primary">Koleksiyonu</span>
+</h2>
+<p class="text-secondary-text text-lg leading-relaxed max-w-xl">
+                        Modern, klasik ve dijital sanatın en seçkin örneklerini keşfedin. Sanatçılarımızın ruhunu yansıtan eserler arasında yolculuğa çıkın.
+                    </p>
+</div>
+<div class="flex items-center gap-2 text-sm text-secondary-text">
+<span class="material-symbols-outlined">filter_list</span>
+<span>324 Eser Listelendi</span>
+</div>
+</div>
+</div>
+<!-- Filter Chips -->
+<div class="w-full border-y border-[#29382f] bg-surface-dark/30 sticky top-20 z-40 backdrop-blur-sm">
+<div class="max-w-[1280px] mx-auto px-4 md:px-8 py-4 overflow-x-auto no-scrollbar">
+<div class="flex gap-3 min-w-max">
+<button class="flex items-center gap-2 px-6 py-2.5 rounded-full bg-primary text-background-dark text-sm font-bold shadow-[0_0_15px_rgba(54,226,123,0.3)] transition-all transform hover:scale-105">
+<span class="material-symbols-outlined text-[18px]">grid_view</span>
+                        Tümü
+                    </button>
+<button class="flex items-center gap-2 px-6 py-2.5 rounded-full bg-surface-dark border border-[#29382f] text-secondary-text hover:text-white hover:border-primary/50 text-sm font-medium transition-all hover:bg-[#29382f]">
+<span class="material-symbols-outlined text-[18px]">brush</span>
+                        Yağlı Boya
+                    </button>
+<button class="flex items-center gap-2 px-6 py-2.5 rounded-full bg-surface-dark border border-[#29382f] text-secondary-text hover:text-white hover:border-primary/50 text-sm font-medium transition-all hover:bg-[#29382f]">
+<span class="material-symbols-outlined text-[18px]">stat_0</span>
+                        Heykel
+                    </button>
+<button class="flex items-center gap-2 px-6 py-2.5 rounded-full bg-surface-dark border border-[#29382f] text-secondary-text hover:text-white hover:border-primary/50 text-sm font-medium transition-all hover:bg-[#29382f]">
+<span class="material-symbols-outlined text-[18px]">devices</span>
+                        Dijital Sanat
+                    </button>
+<button class="flex items-center gap-2 px-6 py-2.5 rounded-full bg-surface-dark border border-[#29382f] text-secondary-text hover:text-white hover:border-primary/50 text-sm font-medium transition-all hover:bg-[#29382f]">
+<span class="material-symbols-outlined text-[18px]">photo_camera</span>
+                        Fotoğraf
+                    </button>
+<button class="flex items-center gap-2 px-6 py-2.5 rounded-full bg-surface-dark border border-[#29382f] text-secondary-text hover:text-white hover:border-primary/50 text-sm font-medium transition-all hover:bg-[#29382f]">
+<span class="material-symbols-outlined text-[18px]">diamond</span>
+                        NFT
+                    </button>
+</div>
+</div>
+</div>
+<!-- Image Grid -->
+<div class="w-full max-w-[1280px] mx-auto px-4 md:px-8 py-10">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+<!-- Card 1 -->
+<div class="group relative aspect-[3/4] overflow-hidden rounded-2xl bg-surface-dark">
+<img alt="Abstract oil painting with vibrant swirling colors" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoYQVTqjDHAiYBAlkYaAVaY5d2yg5g6bI4ecW1lnbfaGQyaVjCQv8t4dlHabFP4FcHw5yLsD5fMiodQqy-v8G0z2LJhhDWPjBKP97fRBNMu1--u6MZUqI0QGpogV_UOSiA7boEAHCG9JvOyN_AuN9u6dwtvicWbyXISjRC_PoDYG0aPMQ_D5QtO3_mt0dCmoslsI_CMIFXqVNY2HEOZIAD0-AHdeXDfS1D4POZBK6caIYoxdBOZD4cDss3rueWC4nzNYCxMSXgVJs"/>
+<!-- Overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="inline-block px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-bold w-fit mb-2 backdrop-blur-sm">Yağlı Boya</span>
+<h3 class="text-white text-xl font-bold mb-1">Soyut Kompozisyon</h3>
+<p class="text-gray-300 text-sm mb-4">Sanatçı: Elif Demir</p>
+<button class="w-full py-3 rounded-xl bg-primary text-background-dark font-bold text-sm hover:bg-white transition-colors flex items-center justify-center gap-2">
+                            Detayları Gör
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group relative aspect-[3/4] overflow-hidden rounded-2xl bg-surface-dark">
+<img alt="Modern marble sculpture of a face fragment" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJzriRRuKzUN7jive-S2H6OE3VBhyR1xzSDkgQPyn-4GRZKfRgUbetCqZvpaMudYk_W9imlQ-O0PiiuJCaVUV92cZPteqhQKWAEU_7irVr-YHA6s_vTcEzbb3tg13Ao7xFkvK2xlUecitMa25lUZDDvs4UfaUpI2__nraG4u5db2oYfDix9RaL_Ki0dPjO6IVgynCUz1E6WfgoSRiTZJhJO8Ouo4r9QLOpnwr_vgKG35I2FXf9H1FyFeRHJ38PzjIFJQPB90pxI24"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="inline-block px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-bold w-fit mb-2 backdrop-blur-sm">Heykel</span>
+<h3 class="text-white text-xl font-bold mb-1">Mermer Düşler</h3>
+<p class="text-gray-300 text-sm mb-4">Sanatçı: Can Yılmaz</p>
+<button class="w-full py-3 rounded-xl bg-primary text-background-dark font-bold text-sm hover:bg-white transition-colors flex items-center justify-center gap-2">
+                            Detayları Gör
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group relative aspect-[3/4] overflow-hidden rounded-2xl bg-surface-dark">
+<img alt="Cyberpunk style digital art portrait with neon lights" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqxjZCwves6SYrpycV7XRAqpf_81nGk-ggOJVJLM0ZrpPDyso1hlNwBQbJVH8DZMy5NGkhozA5vpPm8IpGrLKrRebQxU_aqcFmdIdr_kKJDFzDFb0rORtKy-nCsXixxTnR7SkJH2jWg-5Yt78YiDCBRRRbyabVrkn8Jcn_CXKGM_hLNsp4WjO-r6mzAIRhIDVfMnv78icpoZu5ty_T48Z88j7KKN1Fdpo1IccnX0ZE0aGya7_OIwa3w1sM6GhpXuvhy7w00HjQJLY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="inline-block px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-bold w-fit mb-2 backdrop-blur-sm">Dijital Sanat</span>
+<h3 class="text-white text-xl font-bold mb-1">Siber Ufuklar</h3>
+<p class="text-gray-300 text-sm mb-4">Sanatçı: Neo Pixel</p>
+<button class="w-full py-3 rounded-xl bg-primary text-background-dark font-bold text-sm hover:bg-white transition-colors flex items-center justify-center gap-2">
+                            Detayları Gör
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group relative aspect-[3/4] overflow-hidden rounded-2xl bg-surface-dark">
+<img alt="Colorful pop art style painting of a woman" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpBVS9gChCF4vcb8J0NvOpmkhq586-qbgTd8SgaJsRSd4QIsVoa6khUw00-_0oT0DYyZo60b37lNhN0ogsiRxg131-tB-esD8OYiJ2v_jJxUt45wUbnxZDYdfyLmq95Id1E4ZzTquOgE78LXFHXOM0ybu83bCgrfiILs_JjSQ7qr49kF4aBk428nzVtM5CE6IqINPzPoT9CMCgGj058PNfxczfIYBaHn4dBcVWy-RH48L51X3ao-B_OgmpSpbUFRZFz0yH7NFz6CQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="inline-block px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-bold w-fit mb-2 backdrop-blur-sm">Yağlı Boya</span>
+<h3 class="text-white text-xl font-bold mb-1">Modern Yüzler</h3>
+<p class="text-gray-300 text-sm mb-4">Sanatçı: Leyla Kaya</p>
+<button class="w-full py-3 rounded-xl bg-primary text-background-dark font-bold text-sm hover:bg-white transition-colors flex items-center justify-center gap-2">
+                            Detayları Gör
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="group relative aspect-[3/4] overflow-hidden rounded-2xl bg-surface-dark">
+<img alt="Minimalist geometric shapes in blue and white" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHvC_HAT_GGOP5kFzVEMOlBDPwqkYaakVrvgIWXZQD1vsvP-cFhtf-5m6QHNrGkYqy948uuVCV1xHGZdTZg9FhGtI1Wl7weC8yD9C0z3wAmoQRo1GSj7f1NH6ScLoX1b7kpRPH6kzc9u9eozUIYIb9VBp80riAJPXo8eyBCnVnXgI8egh0inIyfxZmpDfzXPYcrvzXKmVKFsJTajjjhXcKiMM6MHqdM8kIRvNOj6EOn65cGDWhGRixhKqzE2Bgnwp_f0Gde1FSsp4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="inline-block px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-bold w-fit mb-2 backdrop-blur-sm">Dijital Sanat</span>
+<h3 class="text-white text-xl font-bold mb-1">Geometrik Formlar</h3>
+<p class="text-gray-300 text-sm mb-4">Sanatçı: ArtBot</p>
+<button class="w-full py-3 rounded-xl bg-primary text-background-dark font-bold text-sm hover:bg-white transition-colors flex items-center justify-center gap-2">
+                            Detayları Gör
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="group relative aspect-[3/4] overflow-hidden rounded-2xl bg-surface-dark">
+<img alt="Close up of an acrylic pour painting with gold details" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6EJut37VAqTYCILREM2CIY1YgRLOrvosqQiAubB3V4D1HuaPMIVN7VQwjhFESY5fJeEb4iiJe4Z7O2C8gbf6QGDe-y31Yhlqzc-lchINYh7TvL9XLoTq7Smr5BnUhqxx12pUgCV4eeMGBc_Yz0V17VEW5H5RHHliEQKZqKs_phmR46f5M9olK0i8m5sJL2b-swpYdykNsNjwM1Pzg0_wiHMJOcDmBqO-5lXROsb1cCFsFeYIp8cfFj_JlzzLKOyXjIsqq1DF8vgg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="inline-block px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-bold w-fit mb-2 backdrop-blur-sm">Akrilik</span>
+<h3 class="text-white text-xl font-bold mb-1">Altın Akış</h3>
+<p class="text-gray-300 text-sm mb-4">Sanatçı: Zeynep Su</p>
+<button class="w-full py-3 rounded-xl bg-primary text-background-dark font-bold text-sm hover:bg-white transition-colors flex items-center justify-center gap-2">
+                            Detayları Gör
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Card 7 -->
+<div class="group relative aspect-[3/4] overflow-hidden rounded-2xl bg-surface-dark">
+<img alt="Contemporary sculpture made of wire mesh" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFtf6SZcjmnu5Q74DO2HCIODAD30srDykJJvkpviotsoPJxf_irEWDRiSkY3qdgh4iIKCUAnVUQ5InfQZD6Ra1limVD0eN_1tGTU3hwSN-FhlPOmvdLyzeN5Zh5hhvrJN1nWXc9GCyTH2idIhmAajLRYa6aect-BVo8B_42eNESq4zapQAUD2dVyiihs4SPFfmx4I00ISD1PQ0qdKrZ8JkjkKSVziaD53cbR-bskYi-0tcv_I5KR2BTEqMqdrxj3zrtiJzXSnIgZw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="inline-block px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-bold w-fit mb-2 backdrop-blur-sm">Heykel</span>
+<h3 class="text-white text-xl font-bold mb-1">Metalik Bağlar</h3>
+<p class="text-gray-300 text-sm mb-4">Sanatçı: Metal Works</p>
+<button class="w-full py-3 rounded-xl bg-primary text-background-dark font-bold text-sm hover:bg-white transition-colors flex items-center justify-center gap-2">
+                            Detayları Gör
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Card 8 -->
+<div class="group relative aspect-[3/4] overflow-hidden rounded-2xl bg-surface-dark">
+<img alt="Abstract fluid art with dark blue and orange colors" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1HTkYWry-fxEozpQkeBOePu0FBeURv4C2WGbH8qAm_TYgw8_JwhOSq7nPXpNq2uqKuXzG09aFST83YPJo3ehQypunGFPqSPby576VIRvbg9aRKpHrhFXy3ukvpnRdPfbh_rDtNwq4IUUIIS0Z28xSunoUyO1EsL1cbkvRh_9OqGnXHgbtH6vXsZvVeZwaVaWkdaRnl09anfPu4bQecu7qK2SIIB8UKjpgsoKvRbUiom_ip6IsdeptG62eM1z5SDzDeNpup4v8uHA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="inline-block px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-bold w-fit mb-2 backdrop-blur-sm">Dijital Sanat</span>
+<h3 class="text-white text-xl font-bold mb-1">Gece Ateşi</h3>
+<p class="text-gray-300 text-sm mb-4">Sanatçı: Digital Dreamer</p>
+<button class="w-full py-3 rounded-xl bg-primary text-background-dark font-bold text-sm hover:bg-white transition-colors flex items-center justify-center gap-2">
+                            Detayları Gör
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="w-full py-12 flex justify-center">
+<div class="flex items-center gap-2 bg-surface-dark rounded-full p-2 border border-[#29382f]">
+<a class="flex size-10 items-center justify-center rounded-full hover:bg-[#29382f] transition-colors text-white" href="#">
+<span class="material-symbols-outlined">chevron_left</span>
+</a>
+<a class="flex size-10 items-center justify-center rounded-full bg-primary text-background-dark font-bold shadow-[0_0_10px_rgba(54,226,123,0.4)]" href="#">1</a>
+<a class="flex size-10 items-center justify-center rounded-full text-secondary-text hover:bg-[#29382f] hover:text-white transition-colors" href="#">2</a>
+<a class="flex size-10 items-center justify-center rounded-full text-secondary-text hover:bg-[#29382f] hover:text-white transition-colors" href="#">3</a>
+<span class="flex size-10 items-center justify-center text-secondary-text">...</span>
+<a class="flex size-10 items-center justify-center rounded-full text-secondary-text hover:bg-[#29382f] hover:text-white transition-colors" href="#">8</a>
+<a class="flex size-10 items-center justify-center rounded-full hover:bg-[#29382f] transition-colors text-white" href="#">
+<span class="material-symbols-outlined">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- Newsletter Section -->
+<div class="w-full px-4 md:px-8 pb-16">
+<div class="max-w-[1280px] mx-auto bg-surface-dark rounded-3xl p-8 md:p-12 relative overflow-hidden border border-[#29382f]">
+<!-- Abstract Background Gradient -->
+<div class="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/4 pointer-events-none"></div>
+<div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+<div class="max-w-xl text-center md:text-left">
+<h3 class="text-2xl md:text-3xl font-bold text-white mb-3">Sanat Dünyasından Haberdar Olun</h3>
+<p class="text-secondary-text">Yeni koleksiyonlar, sergiler ve özel etkinliklerden ilk siz haberdar olun.</p>
+</div>
+<form class="flex w-full md:w-auto max-w-md items-center gap-2">
+<div class="relative flex-1">
+<input class="w-full bg-background-dark/50 border border-[#29382f] rounded-full px-6 py-3.5 text-white placeholder-secondary-text focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="E-posta adresiniz" type="email"/>
+</div>
+<button class="bg-primary hover:bg-white text-background-dark font-bold px-6 py-3.5 rounded-full transition-colors whitespace-nowrap" type="submit">
+                             Kayıt Ol
+                         </button>
+</form>
+</div>
+</div>
+</div>
+</main>
+</body></html>
