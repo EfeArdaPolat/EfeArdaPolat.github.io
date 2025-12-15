@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html class="light" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sanal Galeri - Giriş Yap</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;family=Noto+Sans:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#4c99e6",
+                        "background-light": "#FFFFFF", /* Pure white for gallery feel */
+                        "background-dark": "#111921",
+                        "text-primary": "#111417",
+                        "text-secondary": "#647587",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-primary antialiased overflow-hidden">
+<div class="relative flex min-h-screen w-full flex-col overflow-hidden">
+<!-- Header -->
+<header class="absolute top-0 left-0 w-full z-10 px-6 py-4 md:px-10 md:py-6 flex items-center justify-between">
+<div class="flex items-center gap-3 text-text-primary">
+<div class="size-8 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold tracking-tight">SANAL GALERİ</h2>
+</div>
+<nav class="hidden md:flex gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" <a href="anasayfa.html">Sergiler</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" <a href="sanatçı.html">Sanatçılar</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" <a href="hakkında.html">Hakkımızda</a>
+</nav>
+</header>
+<!-- Main Content Grid -->
+<main class="flex flex-1 w-full h-full">
+<!-- Left Side: Form Section -->
+<div class="flex flex-1 flex-col justify-center items-center px-6 py-12 lg:px-20 xl:px-32 bg-background-light dark:bg-background-dark relative z-0">
+<div class="w-full max-w-[420px] flex flex-col gap-8">
+<!-- Heading -->
+<div class="flex flex-col gap-2">
+<h1 class="text-4xl font-bold tracking-tight text-text-primary">Hoşgeldiniz</h1>
+<p class="text-text-secondary text-base font-normal">Sanatın dijital dünyasına adım atın. Devam etmek için giriş yapın.</p>
+</div>
+<!-- Form -->
+<form class="flex flex-col gap-5">
+<!-- Email Input -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-text-primary" for="email">E-posta veya Kullanıcı Adı</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-text-secondary select-none pointer-events-none" style="font-size: 20px;">person</span>
+<input class="form-input w-full h-12 rounded-lg border border-[#e5e7eb] bg-[#f9fafb] pl-11 pr-4 text-base text-text-primary placeholder:text-text-secondary focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-all dark:bg-[#1a2633] dark:border-[#2d3b4a]" id="email" placeholder="ornek@email.com" type="text"/>
+</div>
+</div>
+<!-- Password Input -->
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-center">
+<label class="text-sm font-semibold text-text-primary" for="password">Şifre</label>
+<a class="text-xs font-semibold text-primary hover:text-primary/80 hover:underline" href="#">Şifremi Unuttum?</a>
+</div>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-text-secondary select-none pointer-events-none" style="font-size: 20px;">lock</span>
+<input class="form-input w-full h-12 rounded-lg border border-[#e5e7eb] bg-[#f9fafb] pl-11 pr-12 text-base text-text-primary placeholder:text-text-secondary focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-all dark:bg-[#1a2633] dark:border-[#2d3b4a]" id="password" placeholder="********" type="password"/>
+<button class="absolute right-4 top-1/2 -translate-y-1/2 text-text-secondary hover:text-text-primary transition-colors cursor-pointer flex items-center justify-center" type="button">
+<span class="material-symbols-outlined" style="font-size: 20px;">visibility_off</span>
+</button>
+</div>
+</div>
+<!-- Submit Button -->
+<button class="mt-4 flex w-full h-12 items-center justify-center rounded-lg bg-primary text-white text-base font-bold tracking-wide hover:bg-primary/90 transition-all shadow-sm hover:shadow-md active:scale-[0.99]">
+                            Giriş Yap
+                        </button>
+</form>
+<!-- Divider -->
+<div class="relative flex py-2 items-center">
+<div class="flex-grow border-t border-gray-200 dark:border-gray-700"></div>
+<span class="flex-shrink-0 mx-4 text-gray-400 text-xs uppercase font-medium">veya</span>
+<div class="flex-grow border-t border-gray-200 dark:border-gray-700"></div>
+</div>
+<!-- Social Login (Optional but fits modern pattern) -->
+<div class="flex gap-3">
+<button class="flex-1 flex h-10 items-center justify-center gap-2 rounded-lg border border-gray-200 bg-white hover:bg-gray-50 dark:bg-transparent dark:border-gray-700 dark:hover:bg-gray-800 transition-colors">
+<svg class="size-5" fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.766 12.2764C23.766 11.4607 23.6999 10.6406 23.5588 9.83807H12.24V14.4591H18.7217C18.4528 15.9494 17.5885 17.2678 16.323 18.1056V21.1039H20.19C22.4608 19.0139 23.766 15.9274 23.766 12.2764Z" fill="#4285F4"></path><path d="M12.24 24.0008C15.4765 24.0008 18.2059 22.9382 20.19 21.1039L16.323 18.1056C15.2517 18.8375 13.8627 19.252 12.2445 19.252C9.11388 19.252 6.45946 17.1399 5.50705 14.3003H1.5166V17.3912C3.55371 21.4434 7.7029 24.0008 12.24 24.0008Z" fill="#34A853"></path><path d="M5.50253 14.3003C5.00236 12.8099 5.00236 11.1961 5.50253 9.70575V6.61481H1.5166C-0.18551 10.0056 -0.18551 14.0004 1.5166 17.3912L5.50253 14.3003Z" fill="#FBBC05"></path><path d="M12.24 4.74966C13.9509 4.7232 15.6044 5.36697 16.8434 6.54867L20.2695 3.12262C18.1001 1.0855 15.2208 -0.034466 12.24 0.000808666C7.7029 0.000808666 3.55371 2.55822 1.5166 6.61481L5.50253 9.70575C6.45064 6.86173 9.10947 4.74966 12.24 4.74966Z" fill="#EA4335"></path></svg>
+<span class="text-sm font-medium text-text-primary">Google ile</span>
+</button>
+</div>
+<!-- Register Link -->
+<div class="text-center">
+<span class="text-text-secondary text-sm">Hesabınız yok mu? </span>
+<a class="text-sm font-bold text-primary hover:underline" <a href="kayıt.html">Hemen Kayıt Olun</a>
+</div>
+</div>
+</div>
+<!-- Right Side: Hero Image Section -->
+<div class="hidden lg:flex flex-1 relative bg-gray-50 dark:bg-gray-900 overflow-hidden">
+<div class="absolute inset-0 z-0 bg-cover bg-center" data-alt="Abstract minimal 3D sculpture art with soft pastel gradient background in blue and white" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB7BlI_orea9m-jlTXcb9edXrgC8fnr0ryARXApSmIGWp6IBWNkS82atov0R0LWfLW93_yTaLXxmURC-JYaET9smPAl0rWd9tcKb1NcgDyxdq8PV9ASPiWO50aVUfSpKjP3q_xAcgAvZMNDrIy28gy0ulj1RL6hTN1i-dVjJZ1dCYRJrapdfO1plzxQcb2Pd40GMkIqEEJvxIWmbXj0KV2IDXgb6W25vpSyt1pb3peGKFmtpkMh0OST4rknxTftOCTZ0VgQwZWe3Nw'); opacity: 0.9;">
+</div>
+<!-- Overlay for better text contrast if we had text, but mainly for aesthetic tint -->
+<div class="absolute inset-0 bg-gradient-to-t from-white/40 to-transparent dark:from-black/40 mix-blend-overlay"></div>
+<!-- Quote or artistic element -->
+<div class="absolute bottom-12 left-12 right-12 z-10 backdrop-blur-sm bg-white/30 dark:bg-black/30 p-6 rounded-xl border border-white/20">
+<p class="text-text-primary dark:text-white text-lg font-medium italic">"Sanat, ruhumuzdan gündelik hayatın tozunu alır."</p>
+<p class="text-text-primary dark:text-white text-sm font-bold mt-2">— Pablo Picasso</p>
+</div>
+</div>
+</main>
+</div>
+</body></html>
