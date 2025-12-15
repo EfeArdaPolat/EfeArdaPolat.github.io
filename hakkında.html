@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<html class="light" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hakkında - Sanal Galeri</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Inter for Body, Playfair Display for Headings -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#4c7fe6",
+                        "background-light": "#ffffff",
+                        "background-dark": "#111621",
+                        "pastel-blue": "#eff6ff",
+                        "pastel-gray": "#f8f9fa",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#111317] dark:text-white font-display antialiased">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Navigation -->
+<header class="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-sm border-b border-[#f0f2f4] dark:bg-background-dark/90 dark:border-gray-800">
+<div class="layout-container flex justify-center w-full">
+<div class="flex max-w-[1200px] flex-1 items-center justify-between px-6 py-4 lg:px-10">
+<div class="flex items-center gap-4 text-[#111317] dark:text-white">
+<div class="size-8 text-primary">
+<!-- Replaced SVG with Material Symbol for consistency/modern look or keep SVG if logo specific -->
+<span class="material-symbols-outlined text-3xl">grid_view</span>
+</div>
+<h2 class="text-xl font-bold font-serif tracking-tight">Sanal Galeri</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Sergiler</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Sanatçılar</a>
+<a class="text-sm font-medium text-primary" href="#">Hakkında</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">İletişim</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden md:flex h-10 px-6 items-center justify-center rounded-full border border-primary text-primary text-sm font-bold hover:bg-primary hover:text-white transition-all">
+<span>Giriş Yap</span>
+</button>
+<!-- Mobile Menu Icon -->
+<button class="md:hidden text-[#111317] dark:text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col items-center w-full">
+<!-- Hero Section -->
+<section class="w-full flex justify-center py-12 md:py-20 bg-pastel-gray dark:bg-gray-900">
+<div class="w-full max-w-[960px] px-6">
+<div class="flex flex-col items-center text-center gap-6">
+<h1 class="font-serif text-5xl md:text-6xl font-bold text-[#111317] dark:text-white leading-tight">
+                            Hakkında
+                        </h1>
+<p class="text-lg md:text-xl text-[#646f87] dark:text-gray-300 max-w-2xl font-light">
+                            Sanatın dijital geleceğini, sınırları kaldırarak yeniden şekillendiriyoruz.
+                        </p>
+<div class="w-full h-[400px] mt-8 rounded-xl overflow-hidden relative shadow-lg">
+<div class="absolute inset-0 bg-black/20 z-10"></div>
+<img alt="Abstract Art Background" class="w-full h-full object-cover" data-alt="Abstract oil painting with soft pastel swirls" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApPcb8McVPqoJt_T-WKN-RkTLPKyfOnromQcfM5OjK5ZSbjeGAEcxFCfvKYk7mNwCvfJyl45ArMVgHuYy9lnDzZmdNFRA-Jo7aooih0j6wcTUE7Onj4S02Gv97tdTqqWzhBO7XXV47UBx6WKq3186nWpjBbbAm7-Va9hWi6Xr_4up1n77icZezClsmh0CNQWBR095ezVQobKossmUekVs7rRfikardpvI1e-wpBwo_M-vevmFSJLQ8cM4VzJ8gGTxTCcGaVb9yMnc"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Mission & Vision Section -->
+<section class="w-full flex justify-center py-16 bg-white dark:bg-background-dark">
+<div class="w-full max-w-[960px] px-6">
+<div class="flex flex-col md:flex-row gap-12 relative">
+<!-- Mission -->
+<div class="flex-1 flex flex-col gap-4">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-primary text-3xl">light_mode</span>
+<h2 class="font-serif text-2xl font-bold text-[#111317] dark:text-white">Misyonumuz</h2>
+</div>
+<p class="text-[#646f87] dark:text-gray-400 text-base leading-relaxed">
+                                Sanatı fiziksel sınırların ötesine taşıyarak herkes için erişilebilir kılmak. Dijital ve geleneksel sanatçılarımızı küresel bir izleyici kitlesiyle buluşturarak, sanatın evrensel dilini dijital çağın olanaklarıyla yeniden yorumluyoruz.
+                            </p>
+</div>
+<!-- Vertical Separator Line (Hidden on mobile) -->
+<div class="hidden md:block w-px bg-gray-200 dark:bg-gray-700 absolute left-1/2 top-0 bottom-0 -translate-x-1/2"></div>
+<!-- Vision -->
+<div class="flex-1 flex flex-col gap-4">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-primary text-3xl">visibility</span>
+<h2 class="font-serif text-2xl font-bold text-[#111317] dark:text-white">Vizyonumuz</h2>
+</div>
+<p class="text-[#646f87] dark:text-gray-400 text-base leading-relaxed">
+                                Sanal gerçeklik ve dijital estetiğin birleştiği noktada, dünyanın önde gelen çevrimiçi sanat deneyimi merkezi olmak. Geleceğin müzecilik anlayışına yön veren, teknoloji ve sanatı kusursuz bir uyumla sunan bir platform yaratmak.
+                            </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Quote Section -->
+<section class="w-full flex justify-center py-20 bg-pastel-blue/30 dark:bg-gray-800/50">
+<div class="w-full max-w-[800px] px-6 text-center">
+<span class="material-symbols-outlined text-primary/40 text-5xl mb-6">format_quote</span>
+<blockquote class="font-serif text-3xl md:text-4xl italic font-medium text-[#111317] dark:text-white leading-snug">
+                        "Sanat, görüneni tekrarlamaz; görünür kılar."
+                    </blockquote>
+<cite class="block mt-6 text-sm font-bold uppercase tracking-widest text-[#646f87] dark:text-gray-400">
+                        — Paul Klee
+                    </cite>
+</div>
+</section>
+<!-- The Story Narrative -->
+<section class="w-full flex justify-center py-16 md:py-24 bg-white dark:bg-background-dark">
+<div class="w-full max-w-[720px] px-6">
+<h2 class="font-serif text-3xl font-bold text-[#111317] dark:text-white mb-8 text-center md:text-left">Hikayemiz</h2>
+<div class="prose prose-lg dark:prose-invert text-[#646f87] dark:text-gray-300 font-light">
+<p class="mb-6 leading-relaxed">
+                            Sanal Galeri, 2020 yılında, fiziksel mekanların kısıtlamalarından arınmış bir sanat deneyimi hayaliyle kuruldu. Başlangıçta küçük bir dijital sanatçı kolektifi olarak yola çıkan platformumuz, bugün dünyanın dört bir yanından yüzlerce sanatçıya ev sahipliği yapıyor.
+                        </p>
+<p class="mb-6 leading-relaxed">
+                            Geleneksel galeri deneyimini dijital dünyanın sınırsız olanaklarıyla birleştirmeyi hedefledik. WebGL teknolojileri ve yüksek çözünürlüklü görüntüleme sistemleri kullanarak, eserlerin dokusunu, fırça darbelerini ve duygusunu ekranlara taşıdık.
+                        </p>
+<p class="leading-relaxed">
+                            Bizim için her piksel, bir duygunun yansımasıdır. Amacımız sadece eserleri sergilemek değil, izleyicilerimize küratöryel bir anlatı sunarak sanatın derinliklerine bir yolculuk yapmalarını sağlamaktır.
+                        </p>
+</div>
+</div>
+</section>
+<!-- Team Section -->
+<section class="w-full flex justify-center py-16 bg-pastel-gray dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800">
+<div class="w-full max-w-[960px] px-6">
+<div class="flex flex-col items-center mb-12">
+<h2 class="font-serif text-3xl font-bold text-[#111317] dark:text-white mb-3">Ekibimiz</h2>
+<p class="text-[#646f87] dark:text-gray-400 text-center max-w-lg">
+                            Sanat tutkusu ve teknoloji uzmanlığını bir araya getiren küratörlerimiz ve yaratıcı ekibimizle tanışın.
+                        </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+<!-- Team Member 1 -->
+<div class="group flex flex-col items-center text-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+<div class="w-32 h-32 mb-4 rounded-full overflow-hidden border-2 border-primary/20 p-1">
+<img alt="Team Member" class="w-full h-full object-cover rounded-full group-hover:scale-110 transition-transform duration-500" data-alt="Professional portrait of Elif Yılmaz" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVcoznqY4J7cAMrVHb6CTYvzG2xM4HMehVLZDjn0Ki0dLeWj3eREJMudsB6z-UmunppSmiE_kmvB6Y_bnxTkkJcJ7NgAzFD4rcAQkKBVqyjob9Mx8R7d3HU3wlDvEWH55nao-wxxSLxCe9LaSxz3ES4xj0RzC1C7GhIKIo8LtqjHkJB2yxZ89KpChG6pQ8l32OmtYlytJ-ZeaXp5zIqrdvYYdcdqZk9e-DiJkNJXL3rPFRquqYF8W7IYB4qnApxkFbFEzCd6i4TOM"/>
+</div>
+<h3 class="font-serif text-lg font-bold text-[#111317] dark:text-white">Elif Yılmaz</h3>
+<p class="text-primary text-xs font-bold uppercase tracking-wider mb-2">Baş Küratör</p>
+<p class="text-sm text-[#646f87] dark:text-gray-400 line-clamp-2">Sanat tarihi doktorası ve 10 yıllık müze deneyimi ile koleksiyonlarımıza yön veriyor.</p>
+</div>
+<!-- Team Member 2 -->
+<div class="group flex flex-col items-center text-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+<div class="w-32 h-32 mb-4 rounded-full overflow-hidden border-2 border-primary/20 p-1">
+<img alt="Team Member" class="w-full h-full object-cover rounded-full group-hover:scale-110 transition-transform duration-500" data-alt="Professional portrait of Can Demir" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYfL3R4ew4jpJBjBCo_ZtNJqzRYbh0-cdWf5FxSmAVY0LdQcSVGWk_m60M7s5JMAEG5eBhHBivp94b_q0lbAOWypSOMzMjdJZ_V_FomgVgRKLr5A30HviLKTaOo9Ge-8y4u9mxCBQlU4-mVt9-ZyZ4T6T-gMan7YEx6KAokjFRxJJ-Oaq-yjiuPnuAYHO5d6wsyi54kJvG-0cj_1mJoxMnzP8WiwC2U4guiy4Lxx7NYkPjJslyXUm81ByvVwLr9Qwj2W1DphYQibI"/>
+</div>
+<h3 class="font-serif text-lg font-bold text-[#111317] dark:text-white">Can Demir</h3>
+<p class="text-primary text-xs font-bold uppercase tracking-wider mb-2">Dijital Sanat Direktörü</p>
+<p class="text-sm text-[#646f87] dark:text-gray-400 line-clamp-2">Creative coding ve 3D tasarım konusundaki uzmanlığıyla sergilerimizi hayata geçiriyor.</p>
+</div>
+<!-- Team Member 3 -->
+<div class="group flex flex-col items-center text-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+<div class="w-32 h-32 mb-4 rounded-full overflow-hidden border-2 border-primary/20 p-1">
+<img alt="Team Member" class="w-full h-full object-cover rounded-full group-hover:scale-110 transition-transform duration-500" data-alt="Professional portrait of Leyla Sönmez" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDC1WtVbeg8BOeG2QsUZF0h0-qEVtqD4A7arH45KtVnkbA7bxQzhhTjTQlzVrUujO3Y25RPntJXx66QFOdh0Zi0nYy8XXaEzJQjPtkhu_D9HP5PbLFu-S4aGV5zYeZ4VOcj5E_645a9crpNwSIKQjNF98beeaNKkVFRfWt7806yzuFUNAW178B23eU4XuTr2iGlgdOE101OCk6O-AGK4OuLUs7q5v5WqSTRF4aZwFRmiOKDtjIEChDrOLdmGuGaW-nybIKZ5CgYEQA"/>
+</div>
+<h3 class="font-serif text-lg font-bold text-[#111317] dark:text-white">Leyla Sönmez</h3>
+<p class="text-primary text-xs font-bold uppercase tracking-wider mb-2">Topluluk Yöneticisi</p>
+<p class="text-sm text-[#646f87] dark:text-gray-400 line-clamp-2">Sanat severler ve sanatçılar arasındaki köprüyü kurarak diyaloğu güçlendiriyor.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-[#f0f2f4] bg-white dark:bg-background-dark dark:border-gray-800 py-12">
+<div class="layout-container flex justify-center w-full">
+<div class="max-w-[1200px] flex-1 px-6 lg:px-10 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col items-center md:items-start gap-2">
+<div class="flex items-center gap-2 text-[#111317] dark:text-white">
+<span class="material-symbols-outlined text-2xl text-primary">grid_view</span>
+<span class="text-lg font-bold font-serif">Sanal Galeri</span>
+</div>
+<p class="text-sm text-[#646f87] dark:text-gray-500">© 2023 Sanal Galeri. Tüm hakları saklıdır.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-sm font-medium text-[#646f87] hover:text-primary transition-colors dark:text-gray-400" href="#">Gizlilik</a>
+<a class="text-sm font-medium text-[#646f87] hover:text-primary transition-colors dark:text-gray-400" href="#">Kullanım Şartları</a>
+<a class="text-sm font-medium text-[#646f87] hover:text-primary transition-colors dark:text-gray-400" href="#">Yardım</a>
+</div>
+<div class="flex gap-4 text-[#646f87] dark:text-gray-400">
+<a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-xl">thumb_up</span></a> <!-- Mock icon for social -->
+<a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-xl">photo_camera</span></a> <!-- Mock icon for social -->
+<a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-xl">mail</span></a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</body></html>
